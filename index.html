@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="scrapbook">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista de desejos</title>
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('estilo') || 'scrapbook'; } catch (e) {}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600;700&family=Gloock&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <div class="listra" aria-hidden="true"></div>
+  <header class="topbar"><a class="brand" id="brand" href="index.html">lista de desejos ♥</a><div class="conta" id="conta"></div></header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow" id="frase-lista"></p>
+        <h1>Bem-vindo aos desejos da <span class="nome" id="nome-lista"></span></h1>
+        <p class="lead">
+          A lista oficial (e muito bem curada) das coisas que eu adoraria ganhar.
+          Comece pelos mimos e vá descendo: quanto mais fundo, maior o sonho.
+          Sem pressão. Mas também sem desculpa ♥
+        </p>
+      </div>
+
+      <figure class="foto">
+        <span class="brilho b1" aria-hidden="true">✦</span>
+        <div class="foto-img">
+          <span>sua foto aqui ✨</span>
+          <img id="foto-lista" alt="" hidden>
+        </div>
+        <figcaption id="legenda-lista"></figcaption>
+        <span class="brilho b2" aria-hidden="true">✦</span>
+      </figure>
+    </section>
+
+    <section class="como" aria-labelledby="como-titulo">
+      <h2 id="como-titulo">como funciona</h2>
+      <ol class="passos">
+        <li>
+          <span class="passo-num">1</span>
+          <div>
+            <h3>Escolha a camada</h3>
+            <p>Os desejos vão do mimo ao sonho. Desça até onde o bolso (ou o amor) deixar.</p>
+            <nav class="atalhos" id="atalhos" aria-label="Ir para a camada"></nav>
+          </div>
+        </li>
+        <li>
+          <span class="passo-num">2</span>
+          <div>
+            <h3>Abra o desejo</h3>
+            <p>Lá dentro tem tamanho, cor e os detalhes que importam. Pra não ter erro.</p>
+          </div>
+        </li>
+        <li>
+          <span class="passo-num">3</span>
+          <div>
+            <h3>Compre onde está mais barato</h3>
+            <p>Como eu sou legal, já listei os melhores preços pra você: até 5 lojas, da mais barata pra mais cara. De nada ♥</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <nav class="filters" id="filters" aria-label="Categorias"></nav>
+    <div id="tiers"></div>
+
+    <section class="inspiracao" aria-labelledby="inspiracao-titulo">
+      <p class="eyebrow">antes de você ir…</p>
+      <h2 id="inspiracao-titulo">Use como inspiração, mas aceito presentes pensados por você, mozão ♥</h2>
+      <p class="lead">E pra ninguém dizer que eu não avisei, aqui está o calendário oficial de oportunidades de me dar presente:</p>
+      <ol class="datas" id="datas"></ol>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

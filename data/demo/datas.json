@@ -1,0 +1,36 @@
+[
+  {
+    "nome": "Aniversário da Lia",
+    "dia": 10,
+    "mes": 3,
+    "camada": "facil,moderado,especial",
+    "nota": "A data mais importante do ano."
+  },
+  {
+    "nome": "Dia dos Namorados",
+    "dia": 12,
+    "mes": 6,
+    "camada": "facil,moderado,especial",
+    "nota": "Obrigatório."
+  },
+  {
+    "nome": "Dia do Chocolate",
+    "dia": 7,
+    "mes": 7,
+    "camada": "mimo,facil",
+    "nota": "Autoexplicativo."
+  },
+  {
+    "nome": "Natal",
+    "dia": 25,
+    "mes": 12,
+    "camada": "facil,moderado,especial",
+    "nota": "O Papai Noel é você."
+  },
+  {
+    "nome": "Uma terça-feira qualquer",
+    "tipo": "sempre",
+    "camada": "mimo,facil",
+    "nota": "A data mais romântica de todas."
+  }
+]

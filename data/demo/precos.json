@@ -1,0 +1,88 @@
+{
+  "itens": {
+    "caneca-gatinho": [
+      {
+        "loja": "Loja A",
+        "url": "",
+        "preco": 39.9,
+        "disponivel": true
+      },
+      {
+        "loja": "Loja B",
+        "url": "",
+        "preco": 45.0,
+        "disponivel": true
+      }
+    ],
+    "chocolate-amargo": [
+      {
+        "loja": "Loja A",
+        "url": "",
+        "preco": 18.9,
+        "disponivel": true
+      }
+    ],
+    "livro-romance": [
+      {
+        "loja": "Loja B",
+        "url": "",
+        "preco": 49.9,
+        "preco_anterior": 59.9,
+        "disponivel": true
+      },
+      {
+        "loja": "Loja C",
+        "url": "",
+        "preco": 54.0,
+        "disponivel": true
+      }
+    ],
+    "brinco-perola": [
+      {
+        "loja": "Loja C",
+        "url": "",
+        "preco": 129.0,
+        "disponivel": true
+      }
+    ],
+    "vela-lavanda": [
+      {
+        "loja": "Loja A",
+        "url": "",
+        "preco": 69.9,
+        "disponivel": true
+      }
+    ],
+    "tenis-branco": [
+      {
+        "loja": "Loja B",
+        "url": "",
+        "preco": 249.9,
+        "disponivel": true
+      },
+      {
+        "loja": "Loja C",
+        "url": "",
+        "preco": 279.9,
+        "disponivel": true
+      }
+    ],
+    "fone-bluetooth": [
+      {
+        "loja": "Loja A",
+        "url": "",
+        "preco": 299.0,
+        "preco_anterior": 349.0,
+        "disponivel": true
+      }
+    ],
+    "relogio": [
+      {
+        "loja": "Loja C",
+        "url": "",
+        "preco": 590.0,
+        "disponivel": true
+      }
+    ]
+  }
+}

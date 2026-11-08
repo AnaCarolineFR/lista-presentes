@@ -1,0 +1,124 @@
+[
+  {
+    "id": "caneca-gatinho",
+    "nome": "Caneca de gatinho",
+    "descricao": "Pra tomar chá vendo série num domingo chuvoso.",
+    "categoria": "aleatorio",
+    "emoji": "☕"
+  },
+  {
+    "id": "chocolate-amargo",
+    "nome": "Barra de chocolate 70% cacau",
+    "descricao": "Um quadradinho por dia. Ou a barra inteira, sem julgamentos.",
+    "categoria": "doces",
+    "emoji": "🍫"
+  },
+  {
+    "id": "livro-romance",
+    "nome": "Um romance de época",
+    "descricao": "Com capa bonita e final feliz, por favor.",
+    "categoria": "livros",
+    "emoji": "📖",
+    "comentario": "Pode ser qualquer um da Julia Quinn!"
+  },
+  {
+    "id": "brinco-perola",
+    "nome": "Brinco de pérola",
+    "descricao": "Clássico, delicado e combina com tudo.",
+    "categoria": "joias",
+    "emoji": "🦪"
+  },
+  {
+    "id": "vela-lavanda",
+    "nome": "Vela aromática de lavanda",
+    "descricao": "Cheirinho de calma pro quarto.",
+    "categoria": "aleatorio",
+    "emoji": "🕯️"
+  },
+  {
+    "id": "tenis-branco",
+    "nome": "Tênis branco casual",
+    "descricao": "Aquele que combina com qualquer roupa.",
+    "detalhes": "Tamanho: 36",
+    "categoria": "calcados",
+    "emoji": "👟"
+  },
+  {
+    "id": "fone-bluetooth",
+    "nome": "Fone de ouvido bluetooth",
+    "descricao": "Pra ouvir podcast no caminho do trabalho.",
+    "categoria": "eletronicos",
+    "emoji": "🎧"
+  },
+  {
+    "id": "relogio",
+    "nome": "Relógio dourado minimalista",
+    "descricao": "Pulseira fininha, mostrador pequeno.",
+    "categoria": "joias",
+    "emoji": "⌚"
+  },
+  {
+    "id": "piquenique",
+    "nome": "Piquenique no parque",
+    "descricao": "Toalha xadrez, cesta e uma tarde sem celular.",
+    "categoria": "experiencias",
+    "emoji": "🧺",
+    "estimado": 120,
+    "estimado_nota": "comidinhas e bebidas",
+    "quando": "num sábado de sol",
+    "links": [
+      {
+        "nome": "Parques da cidade (mapa)",
+        "obs": "Escolhe um com sombra",
+        "url": "https://www.google.com/maps/search/parque"
+      }
+    ]
+  },
+  {
+    "id": "viagem-praia",
+    "nome": "Fim de semana na praia",
+    "descricao": "Pé na areia, água de coco e pôr do sol.",
+    "categoria": "experiencias",
+    "emoji": "🏖️",
+    "simulacao": true,
+    "quando": "no verão",
+    "estimado_nota": "pousada, transporte e comida",
+    "custos": [
+      {
+        "item": "Pousada",
+        "obs": "2 noites",
+        "valor": 800
+      },
+      {
+        "item": "Transporte",
+        "obs": "ida e volta",
+        "valor": 300
+      },
+      {
+        "item": "Comida",
+        "obs": "",
+        "valor": 500
+      }
+    ],
+    "roteiro": [
+      {
+        "dia": "Sábado",
+        "titulo": "Praia o dia todo",
+        "texto": "Guarda-sol, livro e mergulho."
+      },
+      {
+        "dia": "Domingo",
+        "titulo": "Café com vista e volta",
+        "texto": "Sem pressa."
+      }
+    ],
+    "links": [
+      {
+        "nome": "Booking",
+        "obs": "Pousadas pé na areia",
+        "url": "https://www.booking.com/"
+      }
+    ],
+    "estimado": 1600
+  }
+]

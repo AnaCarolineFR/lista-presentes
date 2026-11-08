@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="scrapbook">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar · Lista de desejos</title>
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('estilo') || 'scrapbook'; } catch (e) {}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600;700&family=Gloock&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <div class="listra" aria-hidden="true"></div>
+  <main class="login">
+    <form class="login-card" id="form-login">
+      <p class="eyebrow">psiu, é segredo ✨</p>
+      <h1>Lista de <span class="nome">desejos</span></h1>
+      <p class="lead">Entre com o usuário e a senha que você recebeu.</p>
+
+      <label>usuário (e-mail)
+        <input type="email" name="email" autocomplete="username" required placeholder="visitante@desejos.app">
+      </label>
+      <label>senha
+        <input type="password" name="senha" autocomplete="current-password" required>
+      </label>
+
+      <p class="login-erro" id="erro" role="alert" hidden></p>
+      <button class="btn" type="submit">entrar ♥</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/db.js"></script>
+  <script>
+    const form = document.getElementById('form-login');
+    const erro = document.getElementById('erro');
+    const volta = new URLSearchParams(location.search).get('volta') || 'index.html';
+
+    // Já logado? Vai direto pra lista
+    db.auth.getSession().then(({ data: { session } }) => { if (session) location.href = volta; });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      erro.hidden = true;
+      const botao = form.querySelector('button');
+      botao.disabled = true;
+      botao.textContent = 'entrando…';
+      const { error } = await db.auth.signInWithPassword({
+        email: form.email.value.trim(),
+        password: form.senha.value,
+      });
+      if (error) {
+        erro.textContent = 'Usuário ou senha não conferem. Tenta de novo?';
+        erro.hidden = false;
+        botao.disabled = false;
+        botao.textContent = 'entrar ♥';
+        return;
+      }
+      location.href = /^[\w.-]+\.html(\?[\w=&%-]*)?$/.test(volta) ? volta : 'index.html';
+    });
+  </script>
+</body>
+</html>
