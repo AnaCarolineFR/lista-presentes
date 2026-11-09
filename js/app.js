@@ -186,16 +186,8 @@ function renderDatas(datas) {
   const sempre = [...datas.filter(d => d.tipo === 'sempre'), ...periodos.filter(d => !d.periodo)];
 
   const contagem = n => n === 0 ? 'é hoje!!' : n === 1 ? 'é amanhã!' : `faltam ${n} dias`;
-  // "camada" pode trazer várias, separadas por vírgula ("facil,moderado,especial").
-  // Sonhos nunca entra como sugestão: lá é só pra sonhar.
-  const camada = ids => {
-    const tipos = String(ids || '').split(',').map(id => TIPOS.find(t => t.id === id.trim()))
-      .filter(t => t && t.id !== 'sonho');
-    return tipos.length
-      ? `<span class="sugestoes">sugestão: ${tipos.map(t =>
-          `<a class="camada tier-${t.nivel}" href="#camada-${t.id}">${t.nome}</a>`).join('')}</span>`
-      : '';
-  };
+  // A sugestão de camadas (coluna "camada") continua no banco, mas não aparece
+  // no calendário até a gente repensar como mostrar isso.
   const linha = (d, mes, dia, falta, classe = '') => `
     <li class="data ${classe}">
       <div class="folha"><span class="mes">${mes}</span><span class="dia${String(dia).length > 2 ? ' longo' : ''}">${dia}</span></div>
@@ -206,7 +198,6 @@ function renderDatas(datas) {
         ${d.aviso ? `<p class="aviso">${d.aviso}</p>` : ''}
         <div class="data-pe">
           <span class="falta">${falta}</span>
-          ${camada(d.camada)}
         </div>
       </div>
     </li>`;
