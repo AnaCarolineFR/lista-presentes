@@ -1,4 +1,4 @@
-# Desejos da Carol ♥
+# Lista de Desejos ♥
 
 Uma lista de desejos com cara de diário: os presentes ficam organizados em **5 camadas de preço**
 (de Mimos a Sonhos), cada item compara o preço em **até 5 lojas**, viagens e experiências ganham
